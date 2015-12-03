@@ -1,0 +1,344 @@
+// ==== STYLES ==== //
+
+// Do not declare anything before the metadata block; this first section is solely for variable, function, and mixin definitions
+// Note: `bower_components` is already in Sass's path
+
+// Scut, a Sass utilities library: https://davidtheclark.github.io/scut/
+@import "scut/dist/scut";
+
+// Configuration variables and settings
+@import "config";
+
+// Library: mixins, functions, etc. specific to this theme
+@import "library";
+
+
+/*!
+Theme Name: #{metadata(theme-name)}
+Theme URI: #{metadata(theme-uri)}
+Author: #{metadata(theme-author)}
+Author URI: #{metadata(theme-author-uri)}
+Description: #{metadata(theme-description)}
+Version: #{metadata(theme-version)}
+License: #{metadata(theme-license)}
+License URI: #{metadata(theme-license-uri)}
+Tags: #{metadata(theme-tags)}
+Text Domain: #{metadata(theme-text-domain)}
+Domain Path: #{metadata(theme-text-domain-path)}
+*/
+
+
+// Normalize: make browsers render things more consistently
+@import "normalize";
+
+// Reset: eliminate default browser styling (optional; commented out by default)
+//@import "reset";
+//ok
+// Everything else
+@import "helpers";
+@import "general";
+@import "layout";
+@import "menus";
+@import "navigation";
+@import "sidebar";
+@import "berelindis-general";
+/* ------ FONT FACE ------ */
+@font-face {
+    font-family: Drugs;
+    src: url('fonts/Drugs.otf');
+}
+@font-face {
+    font-family: Homizio_Black;
+    src: url('fonts/Homizio/black.ttf');
+}
+@font-face {
+    font-family: Homizio_Light;
+    src: url('fonts/Homizio/light.ttf');
+}
+@font-face {
+    font-family: Homizio_Thin;
+    src: url('fonts/Homizio/thin.ttf');
+}
+@font-face {
+    font-family: Homizio_Bold;
+    src: url('fonts/Homizio/bold.ttf');
+}
+body{
+    background-color:#182126;
+}
+/* ------ EGIIS-SECTION ------ */
+.egiis-section{
+    min-height: 500px;
+    text-align: center;
+    h1,h2,h3{
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+    }
+    h2{
+        margin: 70px 0px;
+        line-height: 40px;
+        display: inline-block;
+        font-size: 45px;
+    }
+    p{
+        width: 60%;
+        text-align: center;
+        margin: auto;
+    }
+}
+/* ------ MENU-MAIN ------ */
+#main-nav{
+    @include bl-media(xs) {
+        position: absolute;
+
+    }
+    #menu-main{
+        li{
+            margin-right: 50px;
+        }
+        @include bl-media(xs) {
+            width: 49%;
+
+        }
+
+        position: relative;
+        top: 20px;
+
+
+    }
+    /*.navbar-toggle{
+    .active{
+    min-height: 130px;
+    &:active{
+    min-height: 320px;
+}
+}
+}*/
+}
+/* ------ MOBILE TOGGLE MENU ------ */
+.mobile-activate-menu{
+
+    -webkit-animation: activate_menu 2s forwards; /* Chrome, Safari, Opera */
+    -webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+    animation: activate_menu 2s forwards;
+    animation-delay: 0s;
+}
+
+.mobile-disactivate-menu{
+
+    -webkit-animation: disactivate_menu 2s forwards; /* Chrome, Safari, Opera */
+    -webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+    animation: disactivate_menu 2s forwards;
+    animation-delay: 0s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes activate_menu {
+    from {height: 130px;}
+    to {height: 350px;}
+}
+
+@keyframes activate_menu {
+    from {height: 130px;}
+    to {height: 350px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes disactivate_menu {
+    from {height: 350px;}
+    to {height: 130px;}
+}
+
+@keyframes disactivate_menu {
+    from {height: 350px;}
+    to {height: 130px;}
+}
+
+
+/* ------ HOME ------ */
+#home{
+    background-image: url('images/egiis/bg1.jpg');
+    background-size:cover;
+    h3{
+        color: #f48b54;
+        font-family: 'Homizio_Thin';
+        font-size:40px;
+        letter-spacing: 0.32em;
+    }
+    h1{
+        color:white;
+        font-family: 'Homizio_black';
+        letter-spacing: 0.3em;
+        font-size:50px;
+        width: 65%;
+        margin: auto;
+        @include bl-media(xs) {
+            width:80%;
+            margin-top:20px;
+        }
+        @include bl-media(sm) {
+            width:80%;
+            margin-top:20px;
+        }
+
+    }
+}
+/* ------ ABOUT-US ------ */
+#about-us{
+    background-color:#f48b54;
+
+    h2{
+        color:white;
+        font-family: 'Homizio_black';
+        letter-spacing: 0.3em;
+    }
+    @include bl-media(xs) {
+        padding-bottom: 60px;
+    }
+
+}
+/* ------ TEAM ------ */
+#team{
+    background-color: #182126;
+    color:white;
+    h2{
+        font-family: 'Homizio_Light';
+        letter-spacing: 0.05em;
+        margin-top:20px;
+    }
+    article{
+        display: inline-block;
+        margin:0px 6%;
+        width:350px;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        .team-name,.team-role{
+            font-family: 'Homizio_Bold';
+            letter-spacing: 0.3em;
+            font-size:20px;
+        }
+        .team-name{color: #f48b54;width: 100%;}
+        .team-role{color:white;}
+        @include bl-media(xs) {
+            margin-bottom: 45px;
+        }
+        @include bl-media(sm) {
+            margin-bottom: 45px;
+        }
+    }
+
+
+}
+/* ------ DATA MANAGEMENT ------ */
+#data-management{
+    background-color: white;
+    h2{
+        color:black;
+        font-family: 'Homizio_black';
+        letter-spacing: 0.3em;
+        margin-top: 150px;
+    }
+
+}
+/* ------ PRODUCTS ------ */
+#products{
+    background-image: url('images/egiis/bg2.jpg');
+    background-size:cover;
+    color:white;
+    h2{
+        font-family: 'Homizio_black';
+        letter-spacing: 0.3em;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+        width: 450px;
+    }
+    #products-t1{
+        margin: 45px auto;
+    }
+    #products-t2{
+        font-size: 14px;
+        line-height: 23px;
+        padding-bottom: 70px;
+    }
+
+}
+/* ------ CONTACT ------ */
+#contact{
+    background-color: white;
+    .section-header{
+        h2{
+            color:#f48b54;
+            font-family: 'Homizio_Light';
+            letter-spacing: 0.05em;
+        }
+        .section-legend{
+            color: #182126;
+            width: 60%;
+            margin: auto;
+        }
+    }
+}
+
+/* ------ OTHERS ------ */
+.button-egiis{
+    border:1px solid #f48b54;
+    background-color: white;
+    font-family: 'Homizio_Light';
+    letter-spacing: 0.05em;
+    color:#182126;
+    margin: 70px 0px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: none;
+    text-shadow: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+.drugs{
+    letter-spacing: 0.1em;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: 'Drugs';
+    font-size: 20px;
+}
+#form-contact{
+    input, textarea{
+        border: 1px solid #e6e7e7;
+    }
+    input[type='submit']{
+        letter-spacing: 0.12em;
+        line-height: 30px;
+        font-weight: 500;
+        font-family: 'Drugs';
+        font-size: 12px;
+    }
+}
+/* ------ SVG ------ */
+#main-nav{
+    -webkit-clip-path: url('svg/clip3.svg');
+    clip-path: url('svg/clip3.svg#svgClip');
+    -webkit-mask: url('svg/clip3.svg');
+    height: 130px;
+
+    #header-logo{
+        margin-top: 15px;
+    }
+}
+#about-us{
+    -webkit-clip-path: url('svg/clip1.svg');
+    clip-path: url('svg/clip1.svg#svgClip');
+    -webkit-mask: url('svg/clip1.svg');
+
+}
+#data-management{
+    -webkit-clip-path: url('svg/clip2.svg');
+    clip-path: url('svg/clip2.svg#svgClip');
+    -webkit-mask: url('svg/clip2.svg');
+}
