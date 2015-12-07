@@ -42,6 +42,8 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "navigation";
 @import "sidebar";
 @import "berelindis-general";
+@import "header";
+@import "footer";
 /* ------ FONT FACE ------ */
 @font-face {
     font-family: Drugs;
@@ -88,7 +90,12 @@ body{
     }
 }
 /* ------ MENU-MAIN ------ */
-#main-nav{
+#masthead{
+    background-color: #FFF;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
     @include bl-media(xs) {
         position: absolute;
 
@@ -165,6 +172,9 @@ body{
         font-family: 'Homizio_Thin';
         font-size:40px;
         letter-spacing: 0.32em;
+        position: relative;
+        top: 46px;
+        padding-top: 65px;
     }
     h1{
         color:white;
@@ -175,11 +185,11 @@ body{
         margin: auto;
         @include bl-media(xs) {
             width:80%;
-            margin-top:20px;
+            margin-top:60px;
         }
         @include bl-media(sm) {
             width:80%;
-            margin-top:20px;
+            margin-top:60px;
         }
 
     }
@@ -321,7 +331,7 @@ body{
     }
 }
 /* ------ SVG ------ */
-#main-nav{
+#masthead{
     -webkit-clip-path: url('svg/clip3.svg');
     clip-path: url('svg/clip3.svg#svgClip');
     -webkit-mask: url('svg/clip3.svg');
