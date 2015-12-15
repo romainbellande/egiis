@@ -5,7 +5,7 @@
 *.bak
 *.log
 *.swp
-
+.idea/
 ## Windows
 Desktop.ini
 Thumbs.db
