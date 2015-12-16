@@ -1,0 +1,30 @@
+#site-navigation {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+#logo {
+  float: left;
+  width: 140px;
+  padding: 27px 0;
+}
+#responsive-menu {
+  display: inline-block;
+  padding: 39px 0px;
+}
+#responsive-menu ul li{
+margin: 0 15px;
+}
+#responsive-menu ul li a{
+  color: #182126;
+  font-size: 0.9em;
+}
+#lang {
+  float: right;
+  padding: 31px 0px;
+}
+#lang button {
+  background-color: transparent;
+  border: none;
+  color: #f68b4c;
+}

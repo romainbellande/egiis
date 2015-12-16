@@ -14,11 +14,13 @@
 
       <header id="masthead" class="site-header">
 
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+          <!--  <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> -->
 
         <nav id="site-navigation" class="site-navigation ">
+          <div id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/egiis/logo_egiis.jpg" alt="logo"></a></div>
           <button id="responsive-menu-toggle"><?php _e( 'Menu', 'voidx' ); ?></button>
           <div id="responsive-menu"><?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline' ) ); ?></div>
+          <div id="lang"><button>EN</button></div>
         </nav>
       </header>
 
