@@ -51,3 +51,32 @@ function voidx_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'voidx_widgets_init' );
+
+// Ajouter les images à la une sur les articles
+add_theme_support( 'post-thumbnails' );
+
+// Créer des Custom Post Type
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  // Dupliquer le register_post_type pour ajouter d'autres CPT
+  register_post_type('team',
+      array(
+          'labels' => array(
+              'name' => 'Equipe',
+              'singular_name' => 'Equipe'
+          ),
+          'public' => true,
+          'supports' => array('thumbnail', 'editor', 'title')
+      )
+  );
+  register_post_type('produit',
+      array(
+          'labels' => array(
+              'name' => 'Produits',
+              'singular_name' => 'Produit'
+          ),
+          'public' => true,
+          'supports' => array('thumbnail', 'editor', 'title')
+      )
+  );
+}
