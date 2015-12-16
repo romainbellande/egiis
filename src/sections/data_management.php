@@ -1,12 +1,11 @@
 <section id='data-management' class="egiis-section">
-    <h2 id='data-management-title'>GESTION DE DONNEES</h2>
-    <p class='drugs'>
-        Besoin de valoriser les données de vos clients?
-    Vous désirez extraire des informations à partir de votre site
-     internet ou d'une base de données interne?
-    Vous avez besoin de mettre en place des outils d'analyse?
-    Egiis est là pour vous conseiller sur les solutions à adopter
-    ou en développer une sûr-mesure!
-    </p>
-    <button class="button-egiis" name="button">Voir plus</button>
+    <?php $my_query = new WP_Query(array('post_type' => 'data')); ?>
+    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        <h2 id='data-management-title'><?php the_title(); ?></h2>
+        <div class='drugs'>
+            <?php the_content(); ?>
+        </div>
+        <button class="button-egiis" name="button">Voir plus</button>
+    <?php endwhile; ?>
+
 </section>

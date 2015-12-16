@@ -58,25 +58,56 @@ add_theme_support( 'post-thumbnails' );
 // Créer des Custom Post Type
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
-  // Dupliquer le register_post_type pour ajouter d'autres CPT
-  register_post_type('team',
-      array(
-          'labels' => array(
-              'name' => 'Equipe',
-              'singular_name' => 'Equipe'
-          ),
-          'public' => true,
-          'supports' => array('thumbnail', 'editor', 'title')
-      )
-  );
-  register_post_type('produit',
-      array(
-          'labels' => array(
-              'name' => 'Produits',
-              'singular_name' => 'Produit'
-          ),
-          'public' => true,
-          'supports' => array('thumbnail', 'editor', 'title')
-      )
-  );
+    // Dupliquer le register_post_type pour ajouter d'autres CPT
+    register_post_type('team',
+        array(
+            'labels' => array(
+                'name' => 'Equipe',
+                'singular_name' => 'Equipe'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
+    register_post_type('produit',
+        array(
+            'labels' => array(
+                'name' => 'Produits',
+                'singular_name' => 'Produit'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
+    register_post_type('home',
+        array(
+            'labels' => array(
+                'name' => 'Accueil',
+                'singular_name' => 'Accueil'
+            ),
+            'public' => true,
+            'supports' => array('editor', 'title')
+        )
+    );
+    register_post_type('about',
+        array(
+            'labels' => array(
+                'name' => 'A propos',
+                'singular_name' => 'A propos'
+            ),
+            'public' => true,
+            'supports' => array('editor', 'title')
+        )
+    );
+    register_post_type('data',
+        array(
+            'labels' => array(
+                'name' => 'Gestion de données',
+                'singular_name' => 'Gestion de données'
+            ),
+            'public' => true,
+            'supports' => array('editor', 'title')
+        )
+    );
+
 }

@@ -1,9 +1,9 @@
 <section id='about-us' class="egiis-section">
-    <h2 id='about-us-title'>à propos d'egiis</h2>
-    <p class='drugs'>
-    Issue des incubateurs de 'Télécom Bretagne' et 'Emergys', </br>
-    Egiis est un laboratoire de recherche et développement
-    spécialisé dans le service et conseil aux entreprises pour
-    la gestion des données.
-    </p>
+    <?php $my_query = new WP_Query(array('post_type' => 'about')); ?>
+    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        <h2 id='about-us-title'><?php the_title(); ?></h2>
+        <div class='drugs'>
+            <?php the_content(); ?>
+        </div>
+    <?php endwhile; ?>
 </section>
