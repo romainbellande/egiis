@@ -109,5 +109,4 @@ function create_post_type() {
             'supports' => array('editor', 'title')
         )
     );
-
 }
