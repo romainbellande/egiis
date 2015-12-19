@@ -13,7 +13,7 @@
   padding: 39px 0px;
 }
 #responsive-menu ul li{
-margin: 0 15px;
+  margin: 0 15px;
 }
 #responsive-menu ul li a{
   color: #182126;
@@ -27,4 +27,13 @@ margin: 0 15px;
   background-color: transparent;
   border: none;
   color: #f68b4c;
+}
+#responsive-menu-toggle {
+  background: url("images/egiis/threelines.png");
+  width: 40px;
+  height: 32px;
+  margin-top: 45px;
+  border: none;
+}
+@media (max-width: 619px) {
 }

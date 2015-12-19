@@ -18,7 +18,7 @@
 
         <nav id="site-navigation" class="site-navigation ">
           <div id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/egiis/logo_egiis.jpg" alt="logo"></a></div>
-          <button id="responsive-menu-toggle"><?php _e( 'Menu', 'voidx' ); ?></button>
+          <button id="responsive-menu-toggle"><?php _e( '', 'voidx' ); ?></button>
           <div id="responsive-menu"><?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline' ) ); ?></div>
           <?php $my_title = new WP_Query(array('post_type' => 'divers', 'meta_key' => 'id', 'meta_value' => 'btn_switch_language'));?>
             <?php while ($my_title->have_posts()) : $my_title->the_post(); ?>
