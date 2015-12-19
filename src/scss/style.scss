@@ -105,6 +105,7 @@ body{
     width: 100%;
     z-index: 10;
     top: 0;
+    overflow-y: hidden;
     @include bl-media(xs) {
         position: absolute;
 
@@ -387,9 +388,12 @@ body{
 }
 /* ------ SVG ------ */
 #masthead{
+  @include media-above($break-medium) {
     -webkit-clip-path: url('svg/clip3.svg');
     clip-path: url('svg/clip3.svg#svgClip');
     -webkit-mask: url('svg/clip3.svg');
+  }
+
     height: 130px;
 
     #header-logo{

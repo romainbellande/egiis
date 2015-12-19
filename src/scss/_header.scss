@@ -2,34 +2,62 @@
   width: 90%;
   margin: 0 auto;
   text-align: center;
+
 }
 #logo {
   float: left;
   width: 140px;
   padding: 27px 0;
 }
+
+// Responsive header menu; this container ID handles the fact that `wp_nav_menu()` defaults back to `wp_page_menu()` when no menu is active
 #responsive-menu {
-  display: inline-block;
-  padding: 39px 0px;
+
+  @include media-above($break-medium) {
+    display: inline-block;
+    padding: 39px 0px;
+
+  }
+
+}
+
+// Menu toggle for mobile phones and small screens
+#responsive-menu-toggle {
+  @include media-above($break-medium) {
+    display: none;
+  }
+
 }
 #responsive-menu ul li{
   margin: 0 15px;
+  @include media-below($break-medium){
+    margin: 5px 15px;
+    display: block;
+    width: 100%;
+    float: left;
+    background-color: #DADADA;
+    padding: 2px;
+  }
 }
 #responsive-menu ul li a{
   color: #182126;
   font-size: 0.9em;
 }
 #lang {
-  float: right;
+
   padding: 31px 0px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
-#lang button {
+#lang a {
   background-color: transparent;
   border: none;
   color: #f68b4c;
 }
 #responsive-menu-toggle {
-  background: url("images/egiis/threelines.png");
+  background-image: url('images/egiis/threelines.png');
+  background-color:white;
   width: 40px;
   height: 32px;
   margin-top: 45px;

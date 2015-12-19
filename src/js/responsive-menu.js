@@ -5,6 +5,7 @@
   var nav       = document.getElementById('site-navigation'),
       menu      = document.getElementById('responsive-menu'),
       button    = document.getElementById('responsive-menu-toggle');
+      header    = document.getElementById('masthead');
 
   // Early exit if we're missing anything essential
   if (!nav || typeof button === 'undefined') {
@@ -27,8 +28,12 @@
 
     if (menu.className.indexOf( 'toggled' ) !== -1) {
       menu.className = menu.className.replace(' toggled', '');
+      header.className = header.className.replace(' mobile-activate-menu', '');
+      header.className += ' mobile-disactivate-menu';
     } else {
       menu.className += ' toggled';
+      header.className += ' mobile-activate-menu';
+      header.className = header.className.replace(' mobile-disactivate-menu', '');
     }
   };
 } )();
