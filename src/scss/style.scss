@@ -274,10 +274,13 @@ body{
 }
 /* ------ CONTACT ------ */
 #contact{
-    background-color: white;
+    min-height: 0;
+    background-color: #fff;
     .section-header{
         h2{
             color:#f48b54;
+            font-family: 'Homizio_Light';
+            letter-spacing: 0.05em;
         }
         .section-legend{
             color: #182126;
@@ -286,7 +289,66 @@ body{
         }
     }
 }
-
+#contact-title {
+    color: #f48b54;
+    margin-bottom: 20px;
+}
+#contact-desc {
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#contact-glob {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+}
+#contact-left{
+    width: 30%;
+    display: inline-block;
+    margin-right: 5%;
+    vertical-align:top;
+}
+#contact-right {
+    width: 55%;
+    display: inline-block;
+    margin-left: 5%;
+}
+.champ label{
+    text-align: left;
+    display: block;
+}
+.champ input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 3px solid #e6e7e7;
+}
+.champ-bot {
+    margin-bottom: 40px;
+}
+.champ textarea{
+    width: 100%;
+    height: 133px;
+    padding: 10px;
+    padding-right: 0px;
+    border: 3px solid #e6e7e7;
+}
+.contact-btn {
+    font-size: 0.9em;
+    background-color: transparent;
+    border: 2px solid #f48b54;
+    padding: 10px 40px;
+    margin-right: 8px;
+    float: right;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+.contact-btn:hover {
+    background-color: #f48b54;
+    color: #fff;
+}
 /* ------ OTHERS ------ */
 .button-egiis{
     border:1px solid #f48b54;
