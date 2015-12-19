@@ -59,24 +59,14 @@ add_theme_support( 'post-thumbnails' );
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
     // Dupliquer le register_post_type pour ajouter d'autres CPT
-    register_post_type('team',
+    register_post_type('titles',
         array(
             'labels' => array(
-                'name' => 'Equipe',
-                'singular_name' => 'Equipe'
+                'name' => 'Titres',
+                'singular_name' => 'Titres'
             ),
             'public' => true,
-            'supports' => array('thumbnail', 'editor', 'title')
-        )
-    );
-    register_post_type('produit',
-        array(
-            'labels' => array(
-                'name' => 'Produits',
-                'singular_name' => 'Produit'
-            ),
-            'public' => true,
-            'supports' => array('thumbnail', 'editor', 'title')
+            'supports' => array('title')
         )
     );
     register_post_type('home',
@@ -99,6 +89,17 @@ function create_post_type() {
             'supports' => array('editor', 'title')
         )
     );
+    register_post_type('team',
+
+        array(
+            'labels' => array(
+                'name' => 'Equipe',
+                'singular_name' => 'Equipe'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
     register_post_type('data',
         array(
             'labels' => array(
@@ -109,4 +110,28 @@ function create_post_type() {
             'supports' => array('editor', 'title')
         )
     );
+    register_post_type('products',
+        array(
+            'labels' => array(
+                'name' => 'Produits',
+                'singular_name' => 'Produit'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
+
+    register_post_type('divers',
+        array(
+            'labels' => array(
+                'name' => 'Divers',
+                'singular_name' => 'Divers'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
+
+
+
 }

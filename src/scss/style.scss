@@ -44,6 +44,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "berelindis-general";
 @import "header";
 @import "footer";
+@import "typo";
 /* ------ FONT FACE ------ */
 @font-face {
     font-family: Drugs;
@@ -65,12 +66,14 @@ Domain Path: #{metadata(theme-text-domain-path)}
     font-family: Homizio_Bold;
     src: url('fonts/Homizio/bold.ttf');
 }
+
+
 body{
     background-color:#182126;
 }
 /* ------ EGIIS-SECTION ------ */
 .egiis-section{
-    min-height: 500px;
+    min-height: 930px;
     text-align: center;
     h1,h2,h3{
         text-transform: uppercase;
@@ -78,13 +81,19 @@ body{
         text-align: center;
     }
     h2{
-        margin: 70px 0px;
-        line-height: 40px;
-        display: inline-block;
-        font-size: 45px;
+      margin: 120px 0px;
+      line-height: 40px;
+      display: inline-block;
+      position: relative;
+      @include h2();
+      .clipped{
+        margin: 200px 0px;
+        top: 50px;
+      }
+
     }
     p{
-        width: 60%;
+        width: 75%;
         text-align: center;
         margin: auto;
     }
@@ -167,6 +176,7 @@ body{
 #home{
     background-image: url('images/egiis/bg1.jpg');
     background-size:cover;
+    padding-top: 200px;
     h3{
         color: #f48b54;
         font-family: 'Homizio_Thin';
@@ -185,11 +195,11 @@ body{
         margin: auto;
         @include bl-media(xs) {
             width:80%;
-            margin-top:60px;
+            margin-top:80px;
         }
         @include bl-media(sm) {
             width:80%;
-            margin-top:60px;
+            margin-top:80px;
         }
 
     }
@@ -198,11 +208,6 @@ body{
 #about-us{
     background-color:#f48b54;
 
-    h2{
-        color:white;
-        font-family: 'Homizio_black';
-        letter-spacing: 0.3em;
-    }
     @include bl-media(xs) {
         padding-bottom: 60px;
     }
@@ -212,11 +217,7 @@ body{
 #team{
     background-color: #182126;
     color:white;
-    h2{
-        font-family: 'Homizio_Light';
-        letter-spacing: 0.05em;
-        margin-top:20px;
-    }
+
     article{
         display: inline-block;
         margin:0px 6%;
@@ -247,9 +248,7 @@ body{
     background-color: white;
     h2{
         color:black;
-        font-family: 'Homizio_black';
-        letter-spacing: 0.3em;
-        margin-top: 150px;
+        margin-top:250px;
     }
 
 }
@@ -258,10 +257,6 @@ body{
     background-image: url('images/egiis/bg2.jpg');
     background-size:cover;
     color:white;
-    h2{
-        font-family: 'Homizio_black';
-        letter-spacing: 0.3em;
-    }
     img{
         display: block;
         margin: 0 auto;
@@ -283,8 +278,6 @@ body{
     .section-header{
         h2{
             color:#f48b54;
-            font-family: 'Homizio_Light';
-            letter-spacing: 0.05em;
         }
         .section-legend{
             color: #182126;
@@ -313,7 +306,7 @@ body{
 }
 .drugs{
     letter-spacing: 0.1em;
-    line-height: 30px;
+    line-height: 40px;
     font-weight: 500;
     font-family: 'Drugs';
     font-size: 20px;

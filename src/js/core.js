@@ -4,5 +4,10 @@
 ;(function($){
   $(function(){
     // Insert jQuery code here!
+
+      $('#menu-header li a').scrollomatic({
+        offset: 130
+      });
+
   });
 }(jQuery));

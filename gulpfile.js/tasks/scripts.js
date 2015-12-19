@@ -5,7 +5,6 @@ var gulp        = require('gulp')
   , merge       = require('merge-stream')
   , config      = require('../../gulpconfig').scripts
 ;
-require('es6-promise').polyfill();
 
 // Check core scripts for errors
 gulp.task('scripts-lint', function() {
