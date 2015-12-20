@@ -78,7 +78,7 @@ body{
   right:0px;
   bottom:50%;
   background-image: url('images/egiis/chevron-up.png');
-  
+
   background-color: #f48b54;
   border: 1px solid #182126;
   border-right:none;
@@ -217,16 +217,24 @@ body{
     h3{
         color: #f48b54;
         font-family: 'Homizio_Thin';
+        @include media-below($break-medium){
+          font-size:35px;
+        }
         font-size:40px;
         letter-spacing: 0.32em;
         position: relative;
+
         top: 46px;
+
         padding-top: 65px;
     }
     h1{
         color:white;
         font-family: 'Homizio_black';
         letter-spacing: 0.3em;
+        @include media-below($break-medium){
+          font-size:40px;
+        }
         font-size:50px;
         width: 65%;
         margin: auto;
@@ -258,6 +266,9 @@ body{
     article{
         display: inline-block;
         margin:0px 6%;
+        @include media-below($break-medium){
+          width:80%;
+        }
         width:350px;
         img{
             display: block;

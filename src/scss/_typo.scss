@@ -2,5 +2,8 @@
   color:white;
   font-family: 'Homizio_black';
   letter-spacing: 0.3em;
+  @include media-below($break-medium){
+    font-size:35px;
+  }
   font-size:45px;
 }
