@@ -27,5 +27,8 @@
     "tests",
     ".sass-cache",
     "build"
-  ]
+  ],
+  "dependencies": {
+    "enquire": "~2.1.2"
+  }
 }

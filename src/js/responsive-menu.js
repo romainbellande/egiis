@@ -4,7 +4,7 @@
 ;(function() {
   var nav       = document.getElementById('site-navigation'),
       menu      = document.getElementById('responsive-menu'),
-      button    = document.getElementById('responsive-menu-toggle');
+      button    = document.getElementById('responsive-menu-toggle'),
       header    = document.getElementById('masthead');
 
   // Early exit if we're missing anything essential
@@ -36,4 +36,6 @@
       header.className = header.className.replace(' mobile-disactivate-menu', '');
     }
   };
+
+  
 } )();

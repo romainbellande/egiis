@@ -71,6 +71,26 @@ Domain Path: #{metadata(theme-text-domain-path)}
 body{
     background-color:#182126;
 }
+#header-shortcut{
+  width:50px;
+  height: 50px;
+  position: fixed;
+  right:0px;
+  bottom:50%;
+  background-image: url('images/egiis/chevron-up.png');
+  
+  background-color: #f48b54;
+  border: 1px solid #182126;
+  border-right:none;
+  z-index:99999999999;
+  &:hover{
+    background-color: lighten(#f48b54, 10%);;
+  }
+  @include media-above($break-medium) {
+    display:none;
+  }
+
+}
 /* ------ EGIIS-SECTION ------ */
 .egiis-section{
     min-height: 930px;
@@ -151,6 +171,7 @@ body{
 }
 
 /* Chrome, Safari, Opera */
+/* KEYFRAMES MENU */
 @-webkit-keyframes activate_menu {
     from {height: 130px;}
     to {height: 350px;}
@@ -170,6 +191,21 @@ body{
 @keyframes disactivate_menu {
     from {height: 350px;}
     to {height: 130px;}
+}
+
+/* ------ TOGGLE SEE MORE ------ */
+#see-more{
+  overflow: hidden;
+  max-height: 0px;
+}
+.activate-see-more{
+    max-height: 500px !important;
+    transition: max-height 1.5s ease !important;
+}
+
+.disactivate-see-more{
+    max-height: 0px;
+    transition: max-height 1.5s ease !important;
 }
 
 
@@ -250,6 +286,12 @@ body{
     h2{
         color:black;
         margin-top:250px;
+    }
+    #btn-see-less{
+      background-image: url('images/egiis/arrow-drop-up.svg');
+      width:48px;
+      height: 48px;
+      display:none;
     }
 
 }
