@@ -1,30 +1,37 @@
 <section id='contact' class="egiis-section">
-    <h2 id='contact-title'>contact</h2>
-    <p id="contact-desc">
-        Un produit que nous proposons vous intéresse ?<br>
-        Vous souhaitez nous proposer une mission de conseil ou de développement ?<br>
-        Vous souhaitez utiliser le moteur d'extraction de connaissances K.O.A.I ?
-    </p>
 
-    <form>
+    <?php $my_query = new WP_Query(array('post_type' => 'contact')); ?>
+    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
+        <h2 id='contact-title'><?php the_title(); ?></h2>
+
+        <div id="contact-desc">
+            <?php the_content(); ?>
+        </div>
+
+            <form>
         <div id="contact-glob">
             <div id="contact-left">
                 <div class="champ champ-bot">
-                    <label for="name">Nom</label>
+                    <label for="name"><?php the_field('name'); ?></label>
                     <input required="required" type="text" id="name" name="name">
                 </div>
                 <div class="champ">
-                    <label for="email">Mail</label>
+                    <label for="email"><?php the_field('email'); ?></label>
                     <input required="required" type="email" id="email" name="email">
                 </div>
             </div>
             <div id="contact-right">
                 <div class="champ">
-                    <label for="message">Message</label>
+                    <label for="message"><?php the_field('message'); ?></label>
                     <textarea required="required" type="text" id="message" name="message"></textarea>
                 </div>
             </div>
-            <button class="contact-btn" type="submit">Envoyer</button>
+            <button class="contact-btn" type="submit"><?php the_field('submit'); ?></button>
         </div>
     </form>
+
+
+    <?php endwhile; ?>
+
 </section>

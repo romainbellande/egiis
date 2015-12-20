@@ -120,6 +120,16 @@ function create_post_type() {
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
+    register_post_type('contact',
+        array(
+            'labels' => array(
+                'name' => 'Contact',
+                'singular_name' => 'Contact'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
 
     register_post_type('divers',
         array(
