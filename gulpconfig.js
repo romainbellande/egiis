@@ -54,7 +54,9 @@ module.exports = {
       // The core chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
       core: [
         src+'js/jquery.scrollomatic.js'
-      , bower+ 'enquire/dist/enquire.min.js'
+      , bower+'enquire/dist/enquire.min.js'
+      , src+'js/jcarousel.js',
+      , src+'js/teamCarousel.js'
       , src+'js/responsive-menu.js'
       , src+'js/core.js'
       ]

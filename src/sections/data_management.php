@@ -1,4 +1,5 @@
 <section id='data-management' class="egiis-section">
+  <span id='data-management-target'></span>
     <?php $my_query = new WP_Query(array('post_type' => 'data')); ?>
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
         <h2 id='data-management-title' class='clipped'><?php the_title(); ?></h2>
@@ -17,5 +18,10 @@
           <?php endwhile; ?>
           <button id='btn-see-less' class="button-egiis" name="button"></button>
     <?php endwhile; ?>
-
+    
+    <!--
+    <span class='spacer'>
+      <span class='spacer-center'></span>
+    </span>
+-->
 </section>

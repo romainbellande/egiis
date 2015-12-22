@@ -45,6 +45,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "header";
 @import "footer";
 @import "typo";
+@import "team-carousel";
 /* ------ FONT FACE ------ */
 @font-face {
     font-family: Drugs;
@@ -71,12 +72,33 @@ Domain Path: #{metadata(theme-text-domain-path)}
 body{
     background-color:#182126;
 }
+.spacer{
+  display: block;
+  background-color: #E7E7E7;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  .spacer-center{
+    background-color: #333;
+      height: 1px;
+      width: 100px;;
+      display: block;
+      margin: auto;
+  }
+}
+.spacer-clip{
+  display: block;
+  width: 100%auto;
+  height: 25px;
+  background-color: #182126;
+}
+
 #header-shortcut{
-  width:50px;
-  height: 50px;
+  width:48px;
+  height: 48px;
   position: fixed;
   right:0px;
-  bottom:50%;
+  bottom:0px;
   background-image: url('images/egiis/chevron-up.png');
 
   background-color: #f48b54;
@@ -130,17 +152,12 @@ body{
         position: absolute;
 
     }
-    #menu-main{
+    #menu-header{
         li{
-            margin-right: 50px;
+            a{
+              font-family: 'Homizio_Light';
+            }
         }
-        @include bl-media(xs) {
-            width: 49%;
-
-        }
-
-        position: relative;
-        top: 20px;
 
 
     }
@@ -267,13 +284,8 @@ body{
     background-color: #182126;
     color:white;
 
-    article{
-        display: inline-block;
-        margin:0px 6%;
-        @include media-below($break-medium){
-          width:80%;
-        }
-        width:350px;
+    li{
+        height: 350px;
         img{
             display: block;
             margin: 0 auto;
@@ -285,12 +297,7 @@ body{
         }
         .team-name{color: #f48b54;width: 100%;}
         .team-role{color:white;}
-        @include bl-media(xs) {
-            margin-bottom: 45px;
-        }
-        @include bl-media(sm) {
-            margin-bottom: 45px;
-        }
+
     }
 
 
@@ -348,18 +355,44 @@ body{
 }
 #contact-title {
     color: #f48b54;
-    margin-bottom: 20px;
+    margin-bottom: 75px;
 }
 #contact-desc {
     font-size: 0.9em;
     text-align: center;
     margin-bottom: 50px;
+    line-height: 25px;
 }
 #contact-glob {
     width: 80%;
     margin: 0 auto;
     overflow: hidden;
     padding-bottom: 40px;
+    font-family: 'Drugs';
+    #subject{
+      overflow-x: hidden;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 5px;
+      cursor: pointer;
+      position: relative;
+      width: 90%;
+      margin: auto;
+      margin-bottom:20px;
+      select{
+        border: 0;
+        min-width: 130%;
+        cursor: pointer;
+        color: #000;
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+        -webkit-appearance: none;
+        outline: none;
+        white-space: nowrap;
+        background-color: white;
+        text-indent: 35%;
+      }
+    }
 }
 #contact-left{
     width: 30%;
@@ -456,14 +489,20 @@ body{
         margin-top: 15px;
     }
 }
+#data-management{
+      position: relative;
+      -webkit-clip-path: url('svg/clip4.svg');
+      clip-path: url('svg/clip4.svg#svgClip');
+      -webkit-mask: url('svg/clip4.svg');
+      #data-management-target{
+        position: absolute;
+        top: 10%;
+      }
+
+}
 #about-us{
     -webkit-clip-path: url('svg/clip1.svg');
     clip-path: url('svg/clip1.svg#svgClip');
     -webkit-mask: url('svg/clip1.svg');
 
-}
-#data-management{
-    -webkit-clip-path: url('svg/clip2.svg');
-    clip-path: url('svg/clip2.svg#svgClip');
-    -webkit-mask: url('svg/clip2.svg');
 }

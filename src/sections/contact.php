@@ -1,16 +1,30 @@
 <section id='contact' class="egiis-section">
+  <span class='spacer-clip'></span>
 
     <?php $my_query = new WP_Query(array('post_type' => 'contact')); ?>
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
         <h2 id='contact-title'><?php the_title(); ?></h2>
 
-        <div id="contact-desc">
+        <div id="contact-desc" class='drugs'>
             <?php the_content(); ?>
         </div>
 
             <form>
         <div id="contact-glob">
+
+          <div id="subject">
+            <select class="champ" name="">
+              <?php $subjects = get_field('subjects');
+                $arraySubjects = explode('#',$subjects);
+                echo $subjects;
+                foreach ($arraySubjects as $subject) {
+                  echo "<option>$subject</option>";
+                }
+              ?>
+
+            </select>
+          </div>
             <div id="contact-left">
                 <div class="champ champ-bot">
                     <label for="name"><?php the_field('name'); ?></label>

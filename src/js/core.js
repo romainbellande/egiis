@@ -1,18 +1,13 @@
 // ==== CORE ==== //
 
 // A simple wrapper for all your custom jQuery; everything in this file will be run on every page
+
+
 ;(function($){
   $(function(){
     // Insert jQuery code here!
-    /*
-    if (window.matchMedia("(min-width: 768px)").matches) {
-  $('#menu-header li a').scrollomatic({
-    offset: 130
-  });
-    } else {
-      $('#menu-header li a').scrollomatic();
-    }
-*/
+    
+
 $('#btn-see-more').on('click',function(){
   $('#see-more').removeClass('disactivate-see-more')
   $('#see-more').addClass('activate-see-more');
@@ -127,6 +122,7 @@ enquire.register("screen and (min-width:768px)", {
     destroy : function() {}
 
 });
+
 
   });
 }(jQuery));

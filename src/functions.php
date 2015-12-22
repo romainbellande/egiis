@@ -141,6 +141,7 @@ function create_post_type() {
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
+    
 
 
 
