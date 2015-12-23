@@ -14,10 +14,11 @@
         <div id="contact-glob">
 
           <div id="subject">
-            <select class="champ" name="">
+            <select id='subject-select' class="champ" data-class="contact-select">
+
               <?php $subjects = get_field('subjects');
                 $arraySubjects = explode('#',$subjects);
-                echo $subjects;
+
                 foreach ($arraySubjects as $subject) {
                   echo "<option>$subject</option>";
                 }
@@ -41,7 +42,9 @@
                     <textarea required="required" type="text" id="message" name="message"></textarea>
                 </div>
             </div>
-            <button class="contact-btn" type="submit"><?php the_field('submit'); ?></button>
+              <button class="contact-btn" type="submit"><?php the_field('submit'); ?></button>
+
+
         </div>
     </form>
 

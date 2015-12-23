@@ -61,6 +61,7 @@ function voidx_enqueue_scripts() {
   // Register and enqueue our main stylesheet with versioning based on last modified time
   wp_register_style( 'voidx-style', get_stylesheet_uri(), $dependencies = array(), filemtime( get_template_directory() . '/style.css' ) );
   wp_enqueue_style( 'voidx-style' );
+  wp_enqueue_style('fancySelect',get_stylesheet_directory_uri().'/fancySelect.css');
 
 }
 add_action( 'wp_enqueue_scripts', 'voidx_enqueue_scripts' );

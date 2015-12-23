@@ -355,7 +355,7 @@ body{
 }
 #contact-title {
     color: #f48b54;
-    margin-bottom: 75px;
+    margin-bottom: 58px;
 }
 #contact-desc {
     font-size: 0.9em;
@@ -370,75 +370,102 @@ body{
     padding-bottom: 40px;
     font-family: 'Drugs';
     #subject{
-      overflow-x: hidden;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-      padding: 5px;
-      cursor: pointer;
-      position: relative;
-      width: 90%;
-      margin: auto;
-      margin-bottom:20px;
-      select{
-        border: 0;
-        min-width: 130%;
-        cursor: pointer;
-        color: #000;
-        color: transparent;
-        text-shadow: 0 0 0 #000;
-        -webkit-appearance: none;
-        outline: none;
-        white-space: nowrap;
-        background-color: white;
-        text-indent: 35%;
+      margin:auto;
+      @include media-above($break-medium){
+        width:30%;
+      }
+      width:80%;
+      .trigger{
+        margin: auto;
+        width: auto;
+        background-color:white;
+        border: 3px solid #e6e7e7;
+        box-shadow: none;
+      }
+      .options{
+        background-color:#f48b54;
+        width:100%;
+        li{
+          color: #182126 !important;
+        }
       }
     }
+
 }
 #contact-left{
     width: 30%;
     display: inline-block;
     margin-right: 5%;
     vertical-align:top;
+    @include media-below($break-medium){
+      display:block;
+      width:auto;
+    }
 }
 #contact-right {
     width: 55%;
+    @include media-below($break-medium){
+      width:90%;
+    }
     display: inline-block;
     margin-left: 5%;
+
 }
-.champ label{
-    text-align: left;
-    display: block;
+.champ {
+  margin: auto;
+  right:18px;
+  @include media-below($break-medium){
+
+    width:90%;
+  }
+
+    label{
+        text-align: left;
+        display: block;
+    }
+    input {
+        width: 100%;
+        display: block;
+        padding: 10px 0px;
+        border: 3px solid #e6e7e7;
+    }
+    textarea{
+        width: 100%;
+        @include media-below($break-medium){
+          display:block;
+          width:90%;
+        }
+        height: 133px;
+        padding: 10px;
+        padding-right: 0px;
+        border: 3px solid #e6e7e7;
+
+    }
+    .champ-bot {
+        margin-bottom: 40px;
+    }
 }
-.champ input {
-    width: 100%;
-    display: block;
-    padding: 10px;
-    border: 3px solid #e6e7e7;
-}
-.champ-bot {
-    margin-bottom: 40px;
-}
-.champ textarea{
-    width: 100%;
-    height: 133px;
-    padding: 10px;
-    padding-right: 0px;
-    border: 3px solid #e6e7e7;
-}
+
+
+
 .contact-btn {
-    font-size: 0.9em;
-    background-color: transparent;
-    border: 2px solid #f48b54;
-    padding: 10px 40px;
-    margin-right: 8px;
+  font-size: 0.9em;
+  background-color: transparent;
+  border: 2px solid #f48b54;
+  padding: 10px 40px;
+  margin-right: 8px;
+  @include media-above($break-medium){
     float: right;
-    margin-top: 10px;
-    transition: all 0.5s;
+  }
+  margin-top: 10px;
+  transition: all 0.5s;
 }
 .contact-btn:hover {
     background-color: #f48b54;
     color: #fff;
 }
+
+
 /* ------ OTHERS ------ */
 .button-egiis{
     border:1px solid #f48b54;
@@ -496,6 +523,9 @@ body{
       -webkit-mask: url('svg/clip4.svg');
       #data-management-target{
         position: absolute;
+        @include media-above($break-medium) {
+          top:5%;
+        }
         top: 10%;
       }
 

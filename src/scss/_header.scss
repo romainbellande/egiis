@@ -10,6 +10,11 @@
   padding: 27px 0;
   margin-left: 10px;
   margin-top: 10px;
+  @include media-above($break-medium) {
+    margin-left: 30px;
+    margin-top: 3px;
+  }
+
 }
 
 // Responsive header menu; this container ID handles the fact that `wp_nav_menu()` defaults back to `wp_page_menu()` when no menu is active
@@ -41,12 +46,8 @@
 }
 #responsive-menu ul li a{
   color: #182126;
-  @include media-below($break-medium){
-    //color: #f48b54;
-    color:#182126;
-  }
 
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 #lang {
 
@@ -59,8 +60,12 @@
   background-color: transparent;
   border: none;
   color: #f68b4c;
-  top: 5px;
+  top: 10px;
+  @include media-above($break-medium){
+    top: -10px;
+  }
   position: relative;
+  font-size:20px;
 }
 #responsive-menu-toggle {
   background-image: url('images/egiis/threelines.png');

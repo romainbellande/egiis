@@ -6,7 +6,9 @@
 ;(function($){
   $(function(){
     // Insert jQuery code here!
-    
+
+      /* ------ CONTACT SELECT ------ */
+      $('#subject-select').fancySelect();
 
 $('#btn-see-more').on('click',function(){
   $('#see-more').removeClass('disactivate-see-more')

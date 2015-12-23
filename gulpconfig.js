@@ -8,7 +8,8 @@ var project     = 'test'                 // The directory name for your theme; c
   , assets      = './assets/'             // A staging area for assets that require processing before landing in the source folder (example: icons before being added to a sprite sheet)
   , bower       = './bower_components/'   // Bower packages
   , composer    = './vendor/'             // Composer packages
-  , modules     = './node_modules/'       // npm packages
+  , modules     = './node_modules/'
+  , lib         = './lib/'       // npm packages
 ;
 
 // Project settings
@@ -55,8 +56,9 @@ module.exports = {
       core: [
         src+'js/jquery.scrollomatic.js'
       , bower+'enquire/dist/enquire.min.js'
+      , lib+'fancySelect/fancySelect.js'
       , src+'js/jcarousel.js',
-      , src+'js/teamCarousel.js'
+      , src+'js/teamCarousel.js',
       , src+'js/responsive-menu.js'
       , src+'js/core.js'
       ]
@@ -85,7 +87,7 @@ module.exports = {
 
   styles: {
     build: {
-      src: src+'scss/**/*.scss'
+      src: [lib+'fancySelect/fancySelect.css', src+'scss/**/*.scss']
     , dest: build
     }
   , dist: {
@@ -96,12 +98,12 @@ module.exports = {
   , autoprefixer: { browsers: ['> 3%', 'last 2 versions', 'ie 9', 'ios 6', 'android 4'] } // This tool is magic and you should use it in all your projects :)
   , minify: { keepSpecialComments: 1, roundingPrecision: 4 } // Keep special comments preserves the bits we need for WordPress to recognize the theme's stylesheet
   , rubySass: { // Requires the Ruby implementation of Sass; run `gem install sass` if you use this; Compass is *not* included by default
-      loadPath: ['./src/scss', bower, modules] // Adds Bower and npm directories to the load path so you can @import directly
+      loadPath: ['./src/scss', bower, modules, lib] // Adds Bower and npm directories to the load path so you can @import directly
     , precision: 6
     , sourcemap: true
   }
   , libsass: { // Requires the libsass implementation of Sass (included in this package)
-      includePaths: ['./src/scss', bower, modules] // Adds Bower and npm directories to the load path so you can @import directly
+      includePaths: ['./src/scss', bower, modules, lib] // Adds Bower and npm directories to the load path so you can @import directly
     , precision: 6
     , onError: function(err) {
         return console.log(err);

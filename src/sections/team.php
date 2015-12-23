@@ -6,7 +6,7 @@
     <div class="jcarousel-wrapper">
 
 
-    <div class="jcarousel">
+    <div class="jcarousel" >
       <ul>
         <?php $my_query = new WP_Query(array('post_type' => 'team', 'meta_key' => 'placement', 'order_by' => 'meta_value', 'order' => 'ASC')); ?>
         <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
