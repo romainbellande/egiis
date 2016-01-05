@@ -54,12 +54,14 @@ module.exports = {
   , chunks: { // Chunks are arrays of paths or globs matching a set of source files; this way you can organize a bunch of scripts that go together into pieces that can then be bundled (above)
       // The core chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
       core: [
-        src+'js/jquery.scrollomatic.js'
+        src+'js/jquery.pagescroll2id.min.js'
+      , src+'js/wow.min.js'
       , bower+'enquire/dist/enquire.min.js'
       , lib+'fancySelect/fancySelect.js'
       , src+'js/jcarousel.js',
       , src+'js/teamCarousel.js',
-      , src+'js/responsive-menu.js'
+      , src+'js/responsive-menu.js',
+      , src+'js/animations.js'
       , src+'js/core.js'
       ]
       // The pageloader chunk provides an example of how you would add a user-configurable feature to your theme; you can delete this if you wish

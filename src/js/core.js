@@ -28,7 +28,12 @@ enquire.register("screen and (max-width:768px)", {
     // OPTIONAL
     // If supplied, triggered when a media query matches.
     match : function() {
-      $('#menu-header li a').scrollomatic();
+      $("#menu-header a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#menu-header a",
+        scrollSpeed:800,
+        scrollEasing: "easeOutQuint",
+        scrollingEasing: "easeOutQuint"
+      });
       $('#menu-header li a').on('click',function(){
         var menu = document.getElementById('responsive-menu'),
             header = document.getElementById('masthead');
@@ -38,7 +43,12 @@ enquire.register("screen and (max-width:768px)", {
           header.className += ' mobile-disactivate-menu';
         }
       });
-      $('#header-shortcut').scrollomatic();
+      $("#header-shortcut,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#menu-header a",
+        scrollSpeed:800,
+        scrollEasing: "easeOutQuint",
+        scrollingEasing: "easeOutQuint"
+      });
     },
 
     // OPTIONAL
@@ -46,8 +56,12 @@ enquire.register("screen and (max-width:768px)", {
     // *from a matched state to an unmatched state*.
     unmatch : function() {
 
-      $('#menu-header li a').scrollomatic({
-        offset: 130
+      $("#menu-header a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#menu-header a",
+        scrollSpeed:800,
+        offset:130,
+        scrollEasing: "easeOutQuint",
+        scrollingEasing: "easeOutQuint"
       });
       var menu = document.getElementById('responsive-menu'),
           header = document.getElementById('masthead');
@@ -79,8 +93,12 @@ enquire.register("screen and (min-width:768px)", {
     // OPTIONAL
     // If supplied, triggered when a media query matches.
     match : function() {
-      $('#menu-header li a').scrollomatic({
-        offset: 130
+      $("#menu-header a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#menu-header a",
+        scrollSpeed:800,
+        offset:130,
+        scrollEasing: "easeOutQuint",
+        scrollingEasing: "easeOutQuint"
       });
       var menu = document.getElementById('responsive-menu'),
           header = document.getElementById('masthead');
@@ -95,7 +113,12 @@ enquire.register("screen and (min-width:768px)", {
     // If supplied, triggered when the media query transitions
     // *from a matched state to an unmatched state*.
     unmatch : function() {
-      $('#menu-header li a').scrollomatic();
+      $("#menu-header a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#menu-header a",
+        scrollSpeed:800,
+        scrollEasing: "easeOutQuint",
+        scrollingEasing: "easeOutQuint"
+      });
       $('#menu-header li a').on('click',function(){
         var menu = document.getElementById('responsive-menu'),
             header = document.getElementById('masthead');
@@ -105,7 +128,12 @@ enquire.register("screen and (min-width:768px)", {
           header.className += ' mobile-disactivate-menu';
         }
       });
-      $('#header-shortcut').scrollomatic();
+      $("#menu-header a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+        highlightSelector:"#menu-header a",
+        scrollSpeed:800,
+        scrollEasing: "easeOutQuint",
+        scrollingEasing: "easeOutQuint"
+      });
 
     },
 
@@ -123,8 +151,9 @@ enquire.register("screen and (min-width:768px)", {
     // Place cleanup code here
     destroy : function() {}
 
-});
-
+  });
+  /* ------ [ANIMATION] ------ */
+  new WOW().init();
 
   });
 }(jQuery));

@@ -3,7 +3,7 @@
   <?php while ($my_title->have_posts()) : $my_title->the_post(); ?>
     <h2 id='team-title' class='clipped'><?php the_title(); ?></h2>
     <?php endwhile; ?>
-    <div class="jcarousel-wrapper">
+    <div class="jcarousel-wrapper content">
 
 
     <div class="jcarousel" >

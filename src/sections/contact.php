@@ -5,7 +5,7 @@
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
         <h2 id='contact-title'><?php the_title(); ?></h2>
-
+      <div class="content">
         <div id="contact-desc" class='drugs'>
             <?php the_content(); ?>
         </div>
@@ -46,7 +46,9 @@
 
 
         </div>
-    </form>
+      </form>
+
+</div>
 
 
     <?php endwhile; ?>

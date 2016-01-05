@@ -46,6 +46,7 @@ Domain Path: #{metadata(theme-text-domain-path)}
 @import "footer";
 @import "typo";
 @import "team-carousel";
+@import "animate";
 /* ------ FONT FACE ------ */
 @font-face {
     font-family: Drugs;
@@ -156,6 +157,16 @@ body{
         li{
             a{
               font-family: 'Homizio_Light';
+              &:hover{
+                //color: $primary-color-light;
+              }
+              @include media-above($break-medium){
+                &.mPS2id-highlight-first{
+                  border-bottom: 1px solid #f48b54;
+                  padding-bottom: 5px;
+                }
+              }
+
             }
         }
 
