@@ -13,20 +13,21 @@
             <form>
         <div id="contact-glob">
 
-          <div id="subject">
-            <select id='subject-select' class="champ" data-class="contact-select">
 
-              <?php $subjects = get_field('subjects');
-                $arraySubjects = explode('#',$subjects);
-
-                foreach ($arraySubjects as $subject) {
-                  echo "<option>$subject</option>";
-                }
-              ?>
-
-            </select>
-          </div>
             <div id="contact-left">
+              <div id="subject">
+                <select id='subject-select' class="champ" data-class="contact-select">
+
+                  <?php $subjects = get_field('subjects');
+                    $arraySubjects = explode('#',$subjects);
+
+                    foreach ($arraySubjects as $subject) {
+                      echo "<option>$subject</option>";
+                    }
+                  ?>
+
+                </select>
+              </div>
                 <div class="champ champ-bot">
                     <label for="name"><?php the_field('name'); ?></label>
                     <input required="required" type="text" id="name" name="name">
@@ -42,7 +43,7 @@
                     <textarea required="required" type="text" id="message" name="message"></textarea>
                 </div>
             </div>
-              <button class="contact-btn" type="submit"><?php the_field('submit'); ?></button>
+              <button class="button-egiis contact-btn" type="submit"><?php the_field('submit'); ?></button>
 
 
         </div>
