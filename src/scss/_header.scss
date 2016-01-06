@@ -51,21 +51,20 @@
 }
 #lang {
 
-  padding: 31px 0px;
-  position: absolute;
-  top: 10px;
-  right: 20px;
+  padding: 4px 0px;
+    position: absolute;
+    top: 0px;
+    right: 4px;
 }
 #lang a {
   background-color: transparent;
   border: none;
   color: #f68b4c;
-  top: 10px;
   @include media-above($break-medium){
-    top: -10px;
+    //top: -10px;
   }
   position: relative;
-  font-size:20px;
+  font-size:15px;
 }
 #responsive-menu-toggle {
   background-image: url('images/egiis/threelines.png');

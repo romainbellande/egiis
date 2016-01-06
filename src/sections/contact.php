@@ -1,5 +1,5 @@
 <section id='contact' class="egiis-section">
-  <span class='spacer-clip'></span>
+  <span id="contact-target"></span>
 
     <?php $my_query = new WP_Query(array('post_type' => 'contact')); ?>
     <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
